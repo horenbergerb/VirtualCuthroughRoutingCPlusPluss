@@ -1,0 +1,10 @@
+CC = g++
+CFLAGS = -Wall -g
+
+main: main.o messages.o
+	$(CC) $(CFLAGS) -o main main.o messages.o
+
+main.o: main.cpp messages.h
+	$(CC) $(CFLAGS) -c main.cpp
+
+messages.o: messages.h
